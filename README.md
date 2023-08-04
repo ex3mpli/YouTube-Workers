@@ -32,6 +32,6 @@ New worker url: `https://yourapp.example.workers.dev/stream/@Channel_Name/master
 **Tip**: `https://www.youtube.com/@Channel_Name/live` and `https://www.youtube.com/watch?v=jjH6v95z3Nw` are both acceptable urls, but the former is preferable as it is a permanent url.
 
 ### Sample Link (Not Working)
-[https://youtube.bisdaktv.com/stream/@Channel_Name/master.m3u8](https://youtube.bisdaktv.com/stream/Channel_Name/master.m3u8)
+[https://youtube.bisdaktv.com/stream/@Channel_Name/master.m3u8](https://youtube.bisdaktv.com/stream/Channel_Name/index.m3u8)
 
 Play the above url in VLC media player or any player supporting hls or dash streams
