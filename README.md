@@ -27,7 +27,7 @@ For hls streams use `master.m3u8` in the url path
 For dash streams use `master.m3u8` in the url path
 For ex:
 YouTube url : `https://www.youtube.com/@Channel_Name`
-New worker url: `https://yourapp.example.workers.dev/stream/@Natgeo/master.m3u8`
+New worker url: `https://yourapp.example.workers.dev/stream/@Channel_Name/master.m3u8`
 
 **Tip**: `https://www.youtube.com/@Channel_Name/live` and `https://www.youtube.com/watch?v=jjH6v95z3Nw` are both acceptable urls, but the former is preferable as it is a permanent url.
 
