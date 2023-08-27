@@ -13,12 +13,11 @@ async function hlsUrl(ytUrl) {
 async function handleRequest(request) {
   let pathName = new URL(request.url).pathname.split("/");
   switch (pathName[3]) {
-    case "master.m3u8":
+    case "master.mpd":
       try {
         return Response.redirect(
           await dashUrl(
-            "https://www.youtube.com/" + pathName[2] + "/live"
-          ),
+            "https://www.youtube.com/@" + pathName[2] + "/live"),
           302
         );
       } catch (err) {
@@ -31,8 +30,7 @@ async function handleRequest(request) {
       try {
         return Response.redirect(
           await hlsUrl(
-            "https://www.youtube.com/" + pathName[2] + "/live"
-          ),
+            "https://www.youtube.com/@" + pathName[2] + "/live"),
           302
         );
       } catch (err) {
