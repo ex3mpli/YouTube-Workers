@@ -13,7 +13,7 @@ async function hlsUrl(ytUrl) {
 async function handleRequest(request) {
   let pathName = new URL(request.url).pathname.split("/");
   switch (pathName[3]) {
-    case "index.ts":
+    case "master.m3u8":
       try {
         return Response.redirect(
           await dashUrl(
@@ -27,7 +27,7 @@ async function handleRequest(request) {
           302
         );
       }
-    case "index.m3u8":
+    case "master.m3u8":
       try {
         return Response.redirect(
           await hlsUrl(
@@ -42,7 +42,7 @@ async function handleRequest(request) {
         );
       }
     default:
-      console.log("Error: Invalid path. Use master.ts or master.m3u8");
+      console.log("Error: Invalid path. Use master.mpd or master.m3u8");
       break;
   }
 }
